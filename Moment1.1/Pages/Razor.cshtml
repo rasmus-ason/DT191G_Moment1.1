@@ -1,0 +1,59 @@
+﻿@page
+@model MyApp.Namespace.RazorModel
+@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "Razor";
+};
+
+
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="divideLine"></div>
+
+<div class="datetimeContainer">
+    <h2>Datum & klockslag</h2>
+    <p>@Model.dateTimeWithoutSeconds</p>
+
+        @if (Model.currentWeekday == "monday")
+        {
+            <p>Idag är det måndag!</p>
+        }else
+        {
+            <p>Idag är det inte måndag!</p>
+        }
+</div>
+
+<div class="divideLine"></div>
+
+    <h2>JavaScript-funktionalitet</h2>
+        <div class="js-todolist">
+            <div>
+                <input id="js-input" type="text" />
+                <div id="js-message"></div>
+            </div>
+            <div>
+                <input id="js-submit" type="submit" value="Ok!" />
+            </div>
+            
+        </div>
+        
+        <div class="js-list">
+            <h3>Lista</h3>
+                <ul id="js-list"></ul>
+        </div>
+
+<div class="divideLine"></div>
+
+<h2>Kurslista</h2>
+<div class="courseList-container">
+    <ul class="courseList">
+        @foreach (var item in Model.MyList)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
+
+
+

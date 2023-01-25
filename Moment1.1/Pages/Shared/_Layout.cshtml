@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Razor project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/moment1_1.styles.css" asp-append-version="true" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container header">
+                <!-- Logo -->
+                <div class="header-logo">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Razor Project</a>
+                <!-- Date and time    -->
+                </div>
+                <div class="header-date">
+                    <p>Dagens datum : @DateTime.Now.ToString("dd/MM/yyyy")</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- Side navigation -->
+        <div class="navbar-content">
+            <nav>
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Razor">Razor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Render content -->
+        <main role="main" class="pb-3 render-content">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top p-4 footer text-muted">
+        <div class="container">
+            &copy; 2023 - Razor Project - Av Rasmus Andersson
+        </div>
+        <div class="container">
+            Kontakta mig via e-post: <a href="mailto:andersson.rasmus@hotmail.se">andersson.rasmus@hotmail.se</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

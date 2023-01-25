@@ -1,0 +1,220 @@
+/* General settings */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+main {
+    margin-bottom: 5%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Font settings */
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 2.5vw, 3rem);
+    color: darkorange;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    color: dimgray;
+}
+
+/* Main content ettings */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: max(340px, 80vw);
+    gap: 10px;
+}
+
+.divideLine {
+    width: 80%;
+    height: 1px;
+    background-color: #333;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+/* Navbar/Header settings */
+.navbar-content {
+    background-color: rgb(245, 245, 245);
+    flex-direction: column;
+    width: 30%;
+    height: 80vh;
+    padding-top: 4em;
+    box-shadow: 2px 2px 2px rgba(157, 157, 157, 0.264);
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.header-logo {
+    width: 50%;
+}
+
+.header-date {
+    width: 50%;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    text-align: right;
+    margin-bottom: 0;
+}
+
+
+.header-logo {
+    text-align: center;
+    border: 3px solid darkorange;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.header-logo a {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    text-transform: uppercase;
+}
+
+.header-logo:hover {
+    cursor:pointer;
+    background-color: #f5f5f5;
+}
+
+.navbar-content ul li {
+    margin: auto;
+    border: solid 1px rgb(201, 201, 201);
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.navbar-content ul li:hover {
+    background-color: darkorange;
+    color: #fff;
+    transition: 1s all;
+}
+
+/* Render content settings */
+.render-content {
+    background-color: rgb(245, 245, 245);
+    width: 70%;
+    height: 80vh;
+    overflow-y: scroll;
+    box-shadow: 2px 2px 2px rgba(157, 157, 157, 0.264);
+    padding: 3em 4em 2em 4em;
+}
+
+    .render-content p {
+        max-width: 50ch;
+        line-height: 190%;
+        margin: auto;
+        text-align: center;
+    }
+
+
+
+/* To do list settins */
+.js-todolist{  
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 5px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+
+.js-list {
+    width: 50%;
+    margin: auto;
+}
+
+/* Course list settings */
+.courseList-container {
+    padding: 15px 0 15px 10px;
+    background-color: #fff;
+    height: 250px;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px lightgray;
+    line-height: 180%;
+}
+/* Scrollbar settings*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Media queries for basic structure */
+@media screen and (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px 0 10px;
+    }
+
+    .header-logo, header-date {
+        width: 100%;  
+    }
+
+    .header-date p {
+        text-align: center;
+    }
+
+    .navbar-content {
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+    .navbar-content ul {
+        flex-direction: row;
+        gap: 3px;
+        border: none;
+    }
+
+    .navbar-content ul li {
+        border: none;
+        background-color: rgb(240, 240, 240);
+        box-shadow: 2px 2px 2px rgba(51, 51, 51, 0.264);
+    }
+
+    .render-content, .navbar-content {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        
+    }
+}
+
+
+
